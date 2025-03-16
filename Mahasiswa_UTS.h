@@ -5,33 +5,26 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Mendefinisikan struktur data mahasiswa dan nilai UTS
 typedef struct {
     char nama[50];
     int nilaiUTS;
 } dataMahasiswa;
 
-// Mendefinisikan pointer ke elemen list
 typedef struct tElmtList *address;
 
-// Mendefinisikan struktur elemen dalam list
 typedef struct tElmtList {
     dataMahasiswa info;
     address next;
 } ElmtList;
 
-// Mendefiniskan struktur list
 typedef struct {
     address First;
 } List;
 
-// Membuat list kosong terlebih dahulu
 void CreateList(List *L);
 
-// Alokasi memori untuk elemen baru
 address Alokasi(dataMahasiswa M);
 
-// Membebeaskan memori elemen dengan dealokasi
 void Dealokasi(address P);
 
 void InsertAscendingbyNama(List *L, dataMahasiswa M);
